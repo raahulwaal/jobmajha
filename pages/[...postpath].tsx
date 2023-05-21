@@ -24,6 +24,57 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 			},
 		};
 		}
+		if (referringURL?.includes('linkedin.com') || linkedInclid) {
+    return {
+        redirect: {
+            permanent: false,
+            destination: `${
+                `https://jobmajha.epizy.com/` + encodeURI(path as string)
+            }`,
+        },
+    };
+}
+if (referringURL?.includes('twitter.com') || twitterclid) {
+    return {
+        redirect: {
+            permanent: false,
+            destination: `${
+                `https://jobmajha.epizy.com/` + encodeURI(path as string)
+            }`,
+        },
+    };
+}
+if (referringURL?.includes('youtube.com') || youtubecid) {
+    return {
+        redirect: {
+            permanent: false,
+            destination: `${
+                `https://jobmajha.epizy.com/` + encodeURI(path as string)
+            }`,
+        },
+    };
+}
+if (referringURL?.includes('pinterest.com') || pinterestclid) {
+    return {
+        redirect: {
+            permanent: false,
+            destination: `${
+                `https://jobmajha.epizy.com/` + encodeURI(path as string)
+            }`,
+        },
+    };
+}
+if (referringURL?.includes('t.me') || telegramclid) {
+    return {
+        redirect: {
+            permanent: false,
+            destination: `${
+                `https://jobmajha.epizy.com/` + encodeURI(path as string)
+            }`,
+        },
+    };
+}
+
 	const query = gql`
 		{
 			post(id: "/${path}/", idType: URI) {
